@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="1060" viewBox="0 0 1220 1060" font-family="Segoe UI, Tahoma, sans-serif">
+  <defs>
+    <style>
+      .tbl      { fill:#ffffff; stroke:#0d6efd; stroke-width:1.5; }
+      .tblm     { fill:#ffffff; stroke:#6f42c1; stroke-width:1.5; }
+      .hdr      { fill:#0d6efd; }
+      .hdrm     { fill:#6f42c1; }
+      .hdrtxt   { fill:#ffffff; font-size:14px; font-weight:600; }
+      .col      { font-size:12px; fill:#212529; }
+      .key      { font-size:12px; fill:#0d6efd; font-weight:600; }
+      .keym     { font-size:12px; fill:#6f42c1; font-weight:600; }
+      .nul      { font-size:12px; fill:#6c757d; }
+      .rel      { stroke:#495057; stroke-width:1.6; fill:none; }
+      .relm     { stroke:#8e6fc7; stroke-width:1.4; fill:none; }
+      .relaudit { stroke:#adb5bd; stroke-width:1.6; fill:none; stroke-dasharray:5 4; }
+      .rellbl   { font-size:11px; fill:#495057; }
+      .sep      { stroke:#dee2e6; stroke-width:1; }
+      .title    { font-size:19px; font-weight:700; fill:#212529; }
+      .sub      { font-size:12px; fill:#6c757d; }
+      .zone     { font-size:13px; font-weight:700; }
+    </style>
+    <marker id="crow" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M12,6 L1,1 M12,6 L1,11 M12,6 L1,6" stroke="#495057" stroke-width="1.4" fill="none"/>
+    </marker>
+    <marker id="crowm" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M12,6 L1,1 M12,6 L1,11 M12,6 L1,6" stroke="#8e6fc7" stroke-width="1.3" fill="none"/>
+    </marker>
+    <marker id="one" markerWidth="12" markerHeight="12" refX="1" refY="6" orient="auto">
+      <path d="M4,1 L4,11" stroke="#495057" stroke-width="1.6" fill="none"/>
+    </marker>
+    <marker id="onem" markerWidth="12" markerHeight="12" refX="1" refY="6" orient="auto">
+      <path d="M4,1 L4,11" stroke="#8e6fc7" stroke-width="1.5" fill="none"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="24" y="34">ClinicDB — Entity Relationship Diagram</text>
+  <text class="sub"   x="24" y="54">ClinicCare · Clinic Appointment &amp; Patient Management System · SQL Server Express · final version (Week 7)</text>
+
+  <!-- ================= ZONE 1: application tables ================= -->
+  <rect x="16" y="70" width="1188" height="600" rx="8" fill="#f8f9ff" stroke="#dbe4ff"/>
+  <text class="zone" x="32" y="92" fill="#0d6efd">Application tables — created by 02_CreateTables.sql</text>
+
+  <!-- tblSpecialties -->
+  <g transform="translate(32,110)">
+    <rect class="tbl" x="0" y="0" width="230" height="118" rx="6"/>
+    <path class="hdr" d="M0,6 a6,6 0 0 1 6,-6 h218 a6,6 0 0 1 6,6 v22 h-230 z"/>
+    <text class="hdrtxt" x="12" y="19">tblSpecialties</text>
+    <line class="sep" x1="0" y1="28" x2="230" y2="28"/>
+    <text class="key" x="12" y="46">PK  SpecialtyID</text>
+    <text class="col" x="12" y="64">     SpecialtyName</text><text class="key" x="180" y="64">UQ</text>
+    <text class="nul" x="12" y="82">     Description</text>
+    <text class="col" x="12" y="100">     IsActive</text>
+  </g>
+
+  <!-- tblDoctors -->
+  <g transform="translate(32,320)">
+    <rect class="tbl" x="0" y="0" width="230" height="190" rx="6"/>
+    <path class="hdr" d="M0,6 a6,6 0 0 1 6,-6 h218 a6,6 0 0 1 6,6 v22 h-230 z"/>
+    <text class="hdrtxt" x="12" y="19">tblDoctors</text>
+    <line class="sep" x1="0" y1="28" x2="230" y2="28"/>
+    <text class="key" x="12" y="46">PK  DoctorID</text>
+    <text class="col" x="12" y="64">     FullName</text>
+    <text class="key" x="12" y="82">FK  SpecialtyID</text>
+    <text class="nul" x="12" y="100">     Email</text>
+    <text class="nul" x="12" y="118">     Phone</text>
+    <text class="nul" x="12" y="136">     Bio</text>
+    <text class="nul" x="12" y="154">     PhotoUrl</text>
+    <text class="col" x="12" y="172">     IsActive</text>
+  </g>
+
+  <!-- tblPatients -->
+  <g transform="translate(830,110)">
+    <rect class="tbl" x="0" y="0" width="240" height="208" rx="6"/>
+    <path class="hdr" d="M0,6 a6,6 0 0 1 6,-6 h228 a6,6 0 0 1 6,6 v22 h-240 z"/>
+    <text class="hdrtxt" x="12" y="19">tblPatients</text>
+    <line class="sep" x1="0" y1="28" x2="240" y2="28"/>
+    <text class="key" x="12" y="46">PK  PatientID</text>
+    <text class="col" x="12" y="64">     FullName</text>
+    <text class="col" x="12" y="82">     Gender</text>
+    <text class="nul" x="12" y="100">     DateOfBirth</text>
+    <text class="col" x="12" y="118">     Phone</text>
+    <text class="nul" x="12" y="136">     Email</text>
+    <text class="nul" x="12" y="154">     NationalID</text><text class="key" x="190" y="154">UQ</text>
+    <text class="nul" x="12" y="172">     Notes</text>
+    <text class="col" x="12" y="190">     CreatedAt</text>
+  </g>
+
+  <!-- tblAppointments -->
+  <g transform="translate(430,250)">
+    <rect class="tbl" x="0" y="0" width="250" height="208" rx="6"/>
+    <path class="hdr" d="M0,6 a6,6 0 0 1 6,-6 h238 a6,6 0 0 1 6,6 v22 h-250 z"/>
+    <text class="hdrtxt" x="12" y="19">tblAppointments</text>
+    <line class="sep" x1="0" y1="28" x2="250" y2="28"/>
+    <text class="key" x="12" y="46">PK  AppointmentID</text>
+    <text class="key" x="12" y="64">FK  PatientID</text>
+    <text class="key" x="12" y="82">FK  DoctorID</text>
+    <text class="col" x="12" y="100">     AppointmentDate</text>
+    <text class="col" x="12" y="118">     TimeSlot</text>
+    <text class="col" x="12" y="136">     VisitType</text>
+    <text class="nul" x="12" y="154">     Symptoms</text>
+    <text class="col" x="12" y="172">     Status</text>
+    <text class="col" x="12" y="190">     CreatedAt</text>
+    <text class="rellbl" x="12" y="204" font-style="italic">UQ (DoctorID, AppointmentDate, TimeSlot)</text>
+  </g>
+
+  <!-- tblAppointmentAudit -->
+  <g transform="translate(430,528)">
+    <rect class="tbl" x="0" y="0" width="250" height="126" rx="6" stroke="#adb5bd"/>
+    <path class="hdr" d="M0,6 a6,6 0 0 1 6,-6 h238 a6,6 0 0 1 6,6 v22 h-250 z" fill="#6c757d"/>
+    <text class="hdrtxt" x="12" y="19">tblAppointmentAudit</text>
+    <line class="sep" x1="0" y1="28" x2="250" y2="28"/>
+    <text class="key" x="12" y="46" fill="#6c757d">PK  AuditID</text>
+    <text class="col" x="12" y="64">     AppointmentID</text>
+    <text class="col" x="12" y="82">     Action</text>
+    <text class="col" x="12" y="100">     PerformedBy · PerformedAt</text>
+    <text class="nul" x="12" y="118">     Details</text>
+  </g>
+
+  <!-- application relationships -->
+  <path class="rel" d="M147,228 L147,320" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text class="rellbl" x="155" y="278">has</text>
+
+  <path class="rel" d="M262,400 L340,400 L340,360 L430,360" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text class="rellbl" x="300" y="392">attends</text>
+
+  <path class="rel" d="M830,214 L760,214 L760,320 L680,320" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text class="rellbl" x="700" y="312">books</text>
+
+  <path class="relaudit" d="M555,458 L555,528" marker-end="url(#crow)"/>
+  <text class="rellbl" x="563" y="488" fill="#6c757d">trg_tblAppointments_Insert</text>
+  <text class="rellbl" x="563" y="502" fill="#6c757d">(no FK — audit outlives the row)</text>
+
+  <!-- ================= ZONE 2: membership tables ================= -->
+  <rect x="16" y="690" width="1188" height="352" rx="8" fill="#faf7ff" stroke="#e5daf7"/>
+  <text class="zone" x="32" y="712" fill="#6f42c1">ASP.NET Membership tables — created by aspnet_regsql.exe in the same database (rubric ID 5)</text>
+
+  <!-- aspnet_Applications -->
+  <g transform="translate(32,730)">
+    <rect class="tblm" x="0" y="0" width="210" height="82" rx="6"/>
+    <path class="hdrm" d="M0,6 a6,6 0 0 1 6,-6 h198 a6,6 0 0 1 6,6 v22 h-210 z"/>
+    <text class="hdrtxt" x="12" y="19">aspnet_Applications</text>
+    <line class="sep" x1="0" y1="28" x2="210" y2="28"/>
+    <text class="keym" x="12" y="46">PK  ApplicationId</text>
+    <text class="col" x="12" y="64">     ApplicationName</text>
+  </g>
+
+  <!-- aspnet_Users -->
+  <g transform="translate(330,730)">
+    <rect class="tblm" x="0" y="0" width="220" height="100" rx="6"/>
+    <path class="hdrm" d="M0,6 a6,6 0 0 1 6,-6 h208 a6,6 0 0 1 6,6 v22 h-220 z"/>
+    <text class="hdrtxt" x="12" y="19">aspnet_Users</text>
+    <line class="sep" x1="0" y1="28" x2="220" y2="28"/>
+    <text class="keym" x="12" y="46">PK  UserId</text>
+    <text class="keym" x="12" y="64">FK  ApplicationId</text>
+    <text class="col" x="12" y="82">     UserName</text>
+  </g>
+
+  <!-- aspnet_Membership -->
+  <g transform="translate(330,880)">
+    <rect class="tblm" x="0" y="0" width="220" height="118" rx="6"/>
+    <path class="hdrm" d="M0,6 a6,6 0 0 1 6,-6 h208 a6,6 0 0 1 6,6 v22 h-220 z"/>
+    <text class="hdrtxt" x="12" y="19">aspnet_Membership</text>
+    <line class="sep" x1="0" y1="28" x2="220" y2="28"/>
+    <text class="keym" x="12" y="46">PK/FK  UserId</text>
+    <text class="col" x="12" y="64">     Email</text>
+    <text class="col" x="12" y="82">     Password (hashed)</text>
+    <text class="col" x="12" y="100">     PasswordFormat</text>
+  </g>
+
+  <!-- aspnet_UsersInRoles -->
+  <g transform="translate(650,800)">
+    <rect class="tblm" x="0" y="0" width="210" height="82" rx="6"/>
+    <path class="hdrm" d="M0,6 a6,6 0 0 1 6,-6 h198 a6,6 0 0 1 6,6 v22 h-210 z"/>
+    <text class="hdrtxt" x="12" y="19">aspnet_UsersInRoles</text>
+    <line class="sep" x1="0" y1="28" x2="210" y2="28"/>
+    <text class="keym" x="12" y="46">PK/FK  UserId</text>
+    <text class="keym" x="12" y="64">PK/FK  RoleId</text>
+  </g>
+
+  <!-- aspnet_Roles -->
+  <g transform="translate(960,730)">
+    <rect class="tblm" x="0" y="0" width="210" height="100" rx="6"/>
+    <path class="hdrm" d="M0,6 a6,6 0 0 1 6,-6 h198 a6,6 0 0 1 6,6 v22 h-210 z"/>
+    <text class="hdrtxt" x="12" y="19">aspnet_Roles</text>
+    <line class="sep" x1="0" y1="28" x2="210" y2="28"/>
+    <text class="keym" x="12" y="46">PK  RoleId</text>
+    <text class="keym" x="12" y="64">FK  ApplicationId</text>
+    <text class="col" x="12" y="82">     RoleName</text>
+  </g>
+
+  <!-- membership relationships -->
+  <path class="relm" d="M242,762 L330,762" marker-start="url(#onem)" marker-end="url(#crowm)"/>
+  <path class="relm" d="M440,830 L440,880" marker-start="url(#onem)" marker-end="url(#crowm)"/>
+  <text class="rellbl" x="448" y="860" fill="#6f42c1">1 : 1</text>
+  <path class="relm" d="M550,790 L600,790 L600,830 L650,830" marker-start="url(#onem)" marker-end="url(#crowm)"/>
+  <path class="relm" d="M960,790 L910,790 L910,850 L860,850" marker-start="url(#onem)" marker-end="url(#crowm)"/>
+  <path class="relm" d="M242,752 L280,752 L280,700 L1065,700 L1065,730" marker-start="url(#onem)" marker-end="url(#crowm)"/>
+
+  <text class="rellbl" x="700" y="920" fill="#6f42c1">Users and Roles are linked many-to-many through aspnet_UsersInRoles.</text>
+  <text class="rellbl" x="700" y="936" fill="#6f42c1">Roles used by ClinicCare: Admin, Doctor, Patient.</text>
+  <text class="rellbl" x="700" y="960" fill="#6c757d">No foreign key joins the membership tables to the clinic tables:</text>
+  <text class="rellbl" x="700" y="976" fill="#6c757d">a login is matched to a patient record by email address in code.</text>
+
+  <!-- Legend -->
+  <g transform="translate(32,880)">
+    <rect x="0" y="0" width="240" height="118" rx="6" fill="#ffffff" stroke="#dee2e6"/>
+    <text class="col" x="12" y="22" font-weight="600">Legend</text>
+    <text class="key" x="12" y="44">PK</text><text class="col" x="52" y="44">primary key</text>
+    <text class="key" x="12" y="62">FK</text><text class="col" x="52" y="62">foreign key</text>
+    <text class="key" x="12" y="80">UQ</text><text class="col" x="52" y="80">unique constraint</text>
+    <text class="nul" x="12" y="98">grey text = nullable column</text>
+  </g>
+</svg>

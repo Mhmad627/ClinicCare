@@ -1,0 +1,21 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+bin/app.publish/
+
+# Visual Studio cache/options
+.vs/
+
+# NuGet packages (restored from packages.config)
+projects/**/packages/
+
+# User-specific files
+*.user
+*.suo
+
+# SQL Server backup files (large, regenerable)
+db/backups/*.bak
+
+# Not part of the repo scope
+/misc/
+.claude/

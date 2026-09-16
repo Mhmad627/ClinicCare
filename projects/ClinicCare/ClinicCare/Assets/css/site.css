@@ -1,0 +1,77 @@
+/* =========================================================================
+   ClinicCare - site styles (layered on top of Bootstrap 5)
+   ========================================================================= */
+
+body {
+    background-color: #f7f9fc;
+}
+
+main {
+    min-height: 60vh;
+}
+
+/* -------------------------------------------------------------------------
+   RadioButtonList / CheckBoxList render as <table> or inline spans. These
+   rules give the generated inputs Bootstrap-like spacing without having to
+   set CssClass on every individual ListItem.
+   ------------------------------------------------------------------------- */
+.cc-radio-inline label,
+.cc-check-inline label {
+    margin-right: 1rem;
+    margin-left: 0.35rem;
+    font-weight: 400;
+}
+
+.cc-radio-inline input[type="radio"],
+.cc-check-inline input[type="checkbox"] {
+    margin-right: 0.15rem;
+}
+
+.cc-check-inline td {
+    padding-right: 1rem;
+    padding-bottom: 0.35rem;
+}
+
+/* -------------------------------------------------------------------------
+   GridView pager - ASP.NET emits a single-row table, so style its cells.
+   ------------------------------------------------------------------------- */
+.cc-pager table {
+    margin: 0.75rem 0 0;
+}
+
+.cc-pager td {
+    padding: 0 0.35rem;
+}
+
+.cc-pager a,
+.cc-pager span {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+.cc-pager span {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+/* -------------------------------------------------------------------------
+   GridView header links (sorting) should look clickable but stay readable
+   against the .table-primary header background.
+   ------------------------------------------------------------------------- */
+.table th a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.table th a:hover {
+    text-decoration: underline;
+}
+
+/* Validation feedback (expanded in Week 5) */
+.input-validation-error {
+    border-color: #dc3545 !important;
+}
